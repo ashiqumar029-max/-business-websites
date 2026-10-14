@@ -1,97 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f2eb">
-  <meta name="description" content="Solstice is a modern architecture and interiors studio creating spaces with clarity, warmth, and purpose.">
-  <title>Solstice — Spaces with soul</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0d12">
+  <meta name="description" content="VERTEX — Strategic growth, brand elevation, and business transformation for ambitious companies.">
+  <title>VERTEX — Make Your Next Move Matter</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
   <header class="header">
-    <a class="logo" href="#home" aria-label="Solstice home"><span class="logo-symbol">s<span>·</span></span><span>SOLSTICE<span class="logo-sub">SPACES WITH SOUL</span></span></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <a class="logo" href="#home" aria-label="Vertex home"><span class="logo-icon">V</span><span>VERTEX<span class="dot">®</span></span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#studio">Studio</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#journal">Journal</a><a class="nav-contact" href="#contact">Start a project <span>↗</span></a>
+      <a href="#vision">Our thinking</a><a href="#services">Expertise</a><a href="#impact">Our impact</a><a class="nav-button" href="#contact">Let’s talk <span>↗</span></a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-image" role="img" aria-label="Sunlit contemporary architectural home surrounded by olive trees"></div>
-      <div class="hero-shade"></div>
-      <div class="hero-content">
-        <p class="eyebrow"><span></span> ARCHITECTURE · INTERIORS · OBJECTS</p>
-        <h1>Spaces that<br>make you <em>feel.</em></h1>
-        <p class="hero-copy">We shape thoughtful places for living, working, and everything in between. Rooted in nature. Made for real life.</p>
-        <a class="round-link" href="#projects"><span>Explore our work</span><b>↘</b></a>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> STRATEGY · GROWTH · TRANSFORMATION</div>
+        <p class="hero-overline">FOR THE AMBITIOUS</p>
+        <h1>Business<br>as <em>it should be.</em></h1>
+        <p class="hero-description">We turn big ambition into a clear plan, stronger brands, and measurable business momentum.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#contact">Let’s build something <span>↗</span></a><a class="quiet-link" href="#vision">Explore our approach <span>↓</span></a></div>
+        <div class="hero-trust"><div class="trust-symbols"><span>V</span><span>+</span><span>∞</span></div><p><strong>Clear thinking. Decisive action.</strong><br>Designed for businesses ready for more.</p></div>
       </div>
-      <div class="hero-index"><span>01 / 04</span><span>FORM FOLLOWS FEELING</span></div>
-      <div class="hero-side-note">EST. 2018 — INDEPENDENT DESIGN STUDIO</div>
-    </section>
-
-    <section class="intro section-pad" id="studio">
-      <div class="intro-label"><span class="section-num">01</span><span>THE STUDIO</span></div>
-      <div class="intro-main">
-        <h2>Good design isn't<br>just seen. It's <em>felt.</em></h2>
-        <div class="intro-bottom"><p>Solstice is an independent architecture and interiors studio creating quietly confident spaces with a lasting sense of place. We believe the best environments make everyday moments feel extraordinary.</p><a class="underlink" href="#services">A little about us <span>↗</span></a></div>
+      <div class="hero-art" role="img" aria-label="Modern architectural building representing ambition and growth">
+        <div class="art-overlay"></div><div class="art-top"><span>INDEPENDENT BY DESIGN</span><span>01 / 04</span></div>
+        <div class="art-label"><small>THE VERTEX OUTLOOK</small><strong>Think beyond<br>the obvious.</strong><span>STRATEGY WITH PURPOSE ↗</span></div>
+        <div class="art-vertical">VISION · CLARITY · MOMENTUM</div>
       </div>
-      <div class="intro-aside"><span class="sun-mark">✳</span><p>Less, but<br>better.</p><span>OUR DESIGN PHILOSOPHY</span></div>
+      <div class="hero-footer"><span>INDEPENDENT THINKING. OUTSIZED AMBITION.</span><span>SCROLL TO DISCOVER ↓</span></div>
     </section>
 
-    <section class="projects section-pad" id="projects">
-      <div class="section-head"><div><div class="intro-label"><span class="section-num">02</span><span>SELECTED WORK</span></div><h2>Made with <em>intention.</em></h2></div><a class="underlink" href="#contact">Have a project in mind? <span>↗</span></a></div>
-      <div class="project-grid">
-        <article class="project project-large">
-          <a class="project-image image-house" href="#contact" aria-label="Enquire about a residential architecture project"><span class="image-caption">RESIDENTIAL / 2025</span><span class="image-arrow">↗</span></a>
-          <div class="project-details"><div><h3>The Olive House</h3><p>A slower kind of living, framed by landscape.</p></div><span>01 — 03</span></div>
-        </article>
-        <article class="project project-small">
-          <a class="project-image image-cafe" href="#contact" aria-label="Enquire about a hospitality design project"><span class="image-caption">HOSPITALITY / 2024</span><span class="image-arrow">↗</span></a>
-          <div class="project-details"><div><h3>Sunday Assembly</h3><p>A neighbourhood café with room to linger.</p></div><span>02 — 03</span></div>
-        </article>
-        <article class="project project-small">
-          <a class="project-image image-retreat" href="#contact" aria-label="Enquire about a retreat design project"><span class="image-caption">RETREAT / 2024</span><span class="image-arrow">↗</span></a>
-          <div class="project-details"><div><h3>Stillwater Retreat</h3><p>A quiet escape shaped by light and texture.</p></div><span>03 — 03</span></div>
-        </article>
-      </div>
-      <p class="disclaimer">Featured projects are illustrative portfolio concepts.</p>
+    <section class="brand-strip" aria-label="Principles"><span>MAKE THE COMPLEX CLEAR</span><b>✳</b><span>TURN IDEAS INTO ACTION</span><b>✳</b><span>BUILD WHAT LASTS</span><b>✳</b><span>MAKE THE COMPLEX CLEAR</span></section>
+
+    <section class="section vision" id="vision">
+      <div class="section-meta"><span>01 / THE VERTEX MINDSET</span><span>PROGRESS IS A CHOICE</span></div>
+      <div class="vision-grid"><h2>Good is a start.<br><em>Exceptional</em><br>is a decision.</h2><div class="vision-copy"><p class="lead">The businesses that move forward don’t just work harder. They see more clearly, make better choices, and execute with intent.</p><p>VERTEX works alongside ambitious founders and leadership teams to turn complexity into direction. We challenge assumptions, uncover opportunities, and help make the next move count.</p><a class="inline-link" href="#services">Discover our expertise <span>↗</span></a></div></div>
+      <div class="principles" id="impact"><article><strong>01<span>.</span></strong><h3>Clarity</h3><p>Know what matters, what doesn’t, and where to focus.</p></article><article><strong>02<span>.</span></strong><h3>Momentum</h3><p>Move from endless discussion to confident execution.</p></article><article><strong>03<span>.</span></strong><h3>Enduring value</h3><p>Build the foundations for progress that lasts.</p></article></div>
     </section>
 
-    <section class="manifesto">
-      <div class="manifesto-image" role="img" aria-label="Warm minimalist living space with natural stone and wood"></div>
-      <div class="manifesto-content"><p class="eyebrow"><span></span> OUR POINT OF VIEW</p><h2>Nature gives us<br>the palette.<br><em>People give it purpose.</em></h2><p>Honest materials. Considered details. A little room to breathe. We design around the way people really live, creating spaces that grow more meaningful with time.</p><a class="round-link dark-link" href="#studio"><span>Meet the studio</span><b>↗</b></a><span class="manifesto-number">A MORE HUMAN APPROACH TO DESIGN — NO. 001</span></div>
+    <section class="split-feature">
+      <div class="feature-photo"><div class="photo-badge"><span>V</span><small>THE VERTEX<br>STANDARD</small></div><p>BUILT AROUND YOUR NEXT CHAPTER</p></div>
+      <div class="feature-content"><div class="section-meta"><span>02 / HOW WE THINK</span></div><h2>Big-picture<br>thinking.<br><em>Grounded action.</em></h2><p>We connect the long-term vision to the real-world decisions that shape a business every day.</p><ul><li><span>01</span> Straight answers, thoughtful challenge</li><li><span>02</span> Strategy that works beyond the slide deck</li><li><span>03</span> Collaboration built on trust</li><li><span>04</span> Progress you can actually measure</li></ul><a class="btn btn-outline" href="#contact">Meet your next opportunity <span>↗</span></a></div>
     </section>
 
-    <section class="services section-pad" id="services">
-      <div class="section-head"><div><div class="intro-label"><span class="section-num">03</span><span>WHAT WE DO</span></div><h2>From first sketch<br>to <em>final detail.</em></h2></div><p class="head-copy">One considered process. A connected vision. Every detail working toward the bigger picture.</p></div>
+    <section class="section services" id="services">
+      <div class="section-meta"><span>03 / OUR EXPERTISE</span><span>MADE FOR WHAT COMES NEXT</span></div>
+      <div class="services-head"><h2>Make the next<br>move <em>matter.</em></h2><p>Four ways to turn ambition into a competitive advantage.</p></div>
       <div class="service-list">
-        <article class="service"><span class="service-no">01</span><div><h3>Architecture</h3><p>Spaces shaped by light, landscape, proportion, and the lives unfolding within them.</p></div><span class="service-icon">↗</span></article>
-        <article class="service"><span class="service-no">02</span><div><h3>Interior design</h3><p>Material-rich interiors with warmth, balance, and a sense of effortless belonging.</p></div><span class="service-icon">↗</span></article>
-        <article class="service"><span class="service-no">03</span><div><h3>Hospitality & retail</h3><p>Distinctive places that welcome people in and give them a reason to stay.</p></div><span class="service-icon">↗</span></article>
-        <article class="service"><span class="service-no">04</span><div><h3>Creative direction</h3><p>A clear visual language connecting identity, space, imagery, and experience.</p></div><span class="service-icon">↗</span></article>
+        <article class="service"><span class="service-no">01</span><div><h3>Business & Growth Strategy</h3><p>Find the right opportunities, sharpen your positioning, and create a practical roadmap for growth.</p></div><span class="arrow">↗</span></article>
+        <article class="service"><span class="service-no">02</span><div><h3>Brand & Market Positioning</h3><p>Build a brand that communicates value clearly and earns attention in a crowded market.</p></div><span class="arrow">↗</span></article>
+        <article class="service"><span class="service-no">03</span><div><h3>Digital Transformation</h3><p>Use technology and smarter processes to reduce friction and help your team do its best work.</p></div><span class="arrow">↗</span></article>
+        <article class="service"><span class="service-no">04</span><div><h3>Founder & Leadership Advisory</h3><p>Get a trusted outside perspective for pivotal decisions, changing markets, and your next stage.</p></div><span class="arrow">↗</span></article>
       </div>
     </section>
 
-    <section class="quote-band"><span class="quote-mark">“</span><blockquote>A space should never compete with life.<br>It should make room for it.</blockquote><span class="quote-credit">THE SOLSTICE STUDIO NOTEBOOK</span></section>
+    <section class="statement"><div class="statement-mark">“</div><blockquote>The future doesn’t reward the loudest ambition. It rewards the ambition that <em>gets things done.</em></blockquote><div class="statement-foot"><span>THE VERTEX PRINCIPLE</span><span>LESS NOISE. MORE PROGRESS. ↗</span></div></section>
 
-    <section class="journal section-pad" id="journal">
-      <div class="section-head"><div><div class="intro-label"><span class="section-num">04</span><span>FIELD NOTES</span></div><h2>Thoughts on <em>space.</em></h2></div><a class="underlink" href="#contact">More conversations <span>↗</span></a></div>
-      <div class="journal-grid">
-        <article class="journal-card"><div class="journal-art journal-art-one"><span>01</span><div class="arch-shape"></div></div><span class="journal-meta">MATERIALS · 6 MIN READ</span><h3>The beauty of things that age well</h3><p>Why natural materials tell a richer story as the years pass.</p><a href="#contact" aria-label="Ask us about materials">Read the note ↗</a></article>
-        <article class="journal-card"><div class="journal-art journal-art-two"><span>02</span><div class="window-shape"></div></div><span class="journal-meta">PROCESS · 4 MIN READ</span><h3>Learning to design with light</h3><p>Following the sun can change how a room feels and functions.</p><a href="#contact" aria-label="Ask us about designing with light">Read the note ↗</a></article>
-        <article class="journal-card"><div class="journal-art journal-art-three"><span>03</span><div class="circle-shape"></div></div><span class="journal-meta">LIVING · 5 MIN READ</span><h3>Making space for the everyday</h3><p>Small rituals, quiet corners, and the architecture of daily life.</p><a href="#contact" aria-label="Ask us about everyday living">Read the note ↗</a></article>
-      </div>
+    <section class="section contact" id="contact">
+      <div class="contact-copy"><div class="section-meta"><span>04 / START A CONVERSATION</span></div><h2>Your next<br>chapter starts<br><em>with a move.</em></h2><p>Tell us what you’re building, where you want to go, and what’s standing in the way.</p><div class="contact-note"><span class="note-icon">↗</span><div><strong>One conversation can change the direction.</strong><small>Share your challenge. Let’s explore the opportunity.</small></div></div></div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-heading"><span>LET’S GET TO KNOW YOUR BUSINESS</span><span>✳</span></div>
+        <label for="name">YOUR NAME</label><input id="name" name="name" placeholder="Full name" required>
+        <label for="email">BUSINESS EMAIL</label><input id="email" name="email" type="email" placeholder="you@company.com" required>
+        <label for="company">COMPANY</label><input id="company" name="company" placeholder="Company name">
+        <label for="goal">WHAT WOULD YOU LIKE TO ACHIEVE?</label><select id="goal" name="goal"><option>Grow the business</option><option>Strengthen our brand</option><option>Improve operations</option><option>Explore a new opportunity</option><option>Founder / leadership advice</option><option>Something else</option></select>
+        <label for="message">A LITTLE ABOUT YOUR GOAL</label><textarea id="message" name="message" rows="3" placeholder="What does success look like for you?"></textarea>
+        <button class="btn btn-primary submit" type="submit">Send your enquiry <span>↗</span></button><p class="form-help">Demo form: opens your email app. Set your real business email in script.js before publishing.</p>
+      </form>
     </section>
-
-    <section class="contact" id="contact"><div class="contact-top"><p class="eyebrow"><span></span> YOUR IDEA, OUR NEXT CHAPTER</p><span class="contact-stamp">S · 18</span></div><h2>Let's make room<br>for <em>something good.</em></h2><div class="contact-bottom"><p>Building, refreshing, or imagining something new? Tell us a little about it. We'd love to hear where you're starting.</p><a class="contact-button" href="mailto:hello@example.com?subject=Let's%20start%20a%20project">Start a conversation <span>↗</span></a></div><div class="contact-ornament" aria-hidden="true"></div></section>
   </main>
 
-  <footer class="footer"><a class="logo footer-logo" href="#home"><span class="logo-symbol">s<span>·</span></span><span>SOLSTICE<span class="logo-sub">SPACES WITH SOUL</span></span></a><p>Independent by nature.<br>Considered by design.</p><div class="footer-links"><a href="#studio">Studio</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="mailto:hello@example.com">Email ↗</a></div><span class="footer-copy">© <span id="year"></span> SOLSTICE STUDIO</span></footer>
-  <script src="script.js"></script>
+  <footer class="footer"><a class="logo" href="#home"><span class="logo-icon">V</span><span>VERTEX<span class="dot">®</span></span></a><p>STRATEGY FOR AMBITION.<br>BUILT FOR WHAT’S NEXT.</p><a class="back-top" href="#home">BACK TO TOP ↑</a><small>© <span id="year"></span> VERTEX STUDIO. WEBSITE CONCEPT.</small></footer>
 </body>
 </html>

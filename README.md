@@ -1,24 +1,21 @@
-# Solstice — Business Website
+# VERTEX — Premium Business Website
 
-A high-end responsive concept website for an architecture and interior design studio, built with plain HTML, CSS, and JavaScript.
+A responsive, premium-looking business consultancy website concept designed around a deep navy/black palette, electric-lime accents, editorial typography, architectural photography, and clear calls to action.
 
-## Files
-- `index.html` — site content and structure
-- `styles.css` — full design system, layouts, and mobile responsiveness
-- `script.js` — mobile navigation and dynamic footer year
+## Included
+- `index.html` — semantic page content and contact form
+- `styles.css` — responsive desktop/tablet/mobile styling and reduced-motion support
+- `script.js` — mobile menu, scroll reveal, dynamic footer year, demo email contact form
 
-## Run locally
-Open `index.html` in a browser, or use VS Code Live Server.
+## Run it
+1. Extract the ZIP file.
+2. Open `index.html` in a modern browser.
+3. An internet connection is needed for Google Fonts and the Unsplash photos.
 
-## Publish on GitHub Pages
-1. Create a public GitHub repository.
-2. Upload these files to the repository root.
-3. Open **Settings → Pages**.
-4. Select **Deploy from a branch**, branch `main`, folder `/(root)`, then Save.
-5. Wait for GitHub Pages to publish the live URL.
+## Before publishing
+1. Replace the VERTEX brand and copy with your real company details.
+2. In `script.js`, replace `hello@example.com` with your business email.
+3. The form currently opens the visitor's email app; it does not store submissions online. Connect a secure form backend/service for live enquiries.
+4. Replace any generic service descriptions with accurate information about your business.
 
-## Before using for a real business
-- Replace every `hello@example.com` address with the real business email.
-- Replace concept project descriptions with accurate client/project details if presenting this as a real studio.
-- Images are loaded from Unsplash URLs and require an internet connection.
-- This is a front-end portfolio concept; the contact link opens an email draft and does not store form submissions.
+This is a front-end concept website; it does not include a server, CRM, or live analytics.

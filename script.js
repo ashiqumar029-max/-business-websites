@@ -1,66 +1,118 @@
 
-/* =====================================
-   SOLSTICE — BUSINESS WEBSITE
-   Mobile Navigation & Footer
-===================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  // Mobile navigation toggle
+  const menuToggle = document.querySelector(
+    ".menu-toggle, .nav-toggle, #menu-toggle"
+  );
+  const navigation = document.querySelector(
+    ".nav-links, .navigation, #nav-links"
+  );
 
-// Mobile navigation
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
+  if (menuToggle && navigation) {
+    menuToggle.addEventListener("click", () => {
+      navigation.classList.toggle("active");
 
-if (menuToggle && nav) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
+      const isOpen = navigation.classList.contains("active");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
 
-    menuToggle.setAttribute(
-      'aria-expanded',
-      String(isOpen)
-    );
+  // Smooth scrolling for internal links
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
 
-    menuToggle.setAttribute(
-      'aria-label',
-      isOpen ? 'Close navigation' : 'Open navigation'
-    );
-  });
+      if (!targetId || targetId === "#") return;
 
-  // Close menu when a navigation link is clicked
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
+      const target = document.querySelector(targetId);
+      if (!target) return;
 
-      menuToggle.setAttribute(
-        'aria-expanded',
-        'false'
-      );
+      event.preventDefault();
 
-      menuToggle.setAttribute(
-        'aria-label',
-        'Open navigation'
-      );
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      navigation?.classList.remove("active");
+      menuToggle?.setAttribute("aria-expanded", "false");
     });
   });
 
-  // Close menu with Escape key
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      nav.classList.remove('open');
+  // Header shadow when scrolling
+  const header = document.querySelector("header");
 
-      menuToggle.setAttribute(
-        'aria-expanded',
-        'false'
-      );
-
-      menuToggle.setAttribute(
-        'aria-label',
-        'Open navigation'
-      );
+  const updateHeader = () => {
+    if (header) {
+      header.classList.toggle("scrolled", window.scrollY > 20);
     }
+  };
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  // Reveal elements when they enter the viewport
+  const revealElements = document.querySelectorAll(
+    ".reveal, .fade-in, .service-card, .stat-card"
+  );
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealElements.forEach((element) => observer.observe(element));
+  } else {
+    revealElements.forEach((element) => element.classList.add("visible"));
+  }
+
+  // Contact form demo
+  const contactForm = document.querySelector(
+    "#contact-form, .contact-form, form[data-contact-form]"
+  );
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) return;
+
+      const formData = new FormData(contactForm);
+      const name = String(formData.get("name") || "").trim();
+      const email = String(formData.get("email") || "").trim();
+      const message = String(formData.get("message") || "").trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      const subject = encodeURIComponent(
+        `Website enquiry from ${name}`
+      );
+
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+      );
+
+      // Replace this address with your real business email.
+      const businessEmail = "hello@example.com";
+
+      window.location.href =
+        `mailto:${businessEmail}?subject=${subject}&body=${body}`;
+    });
+  }
+
+  // Update copyright year automatically
+  document.querySelectorAll("[data-current-year]").forEach((element) => {
+    element.textContent = new Date().getFullYear();
   });
-}
-
-// Automatically update the copyright year
-const yearElement = document.getElementById('year');
-
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+});
