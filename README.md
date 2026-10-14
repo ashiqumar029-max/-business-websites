@@ -1,21 +1,24 @@
-# NOIR/FORM® — Business Website
+# Solstice — Business Website
 
-A responsive, dark editorial-style creative studio website built with plain HTML, CSS, and JavaScript.
+A high-end responsive concept website for an architecture and interior design studio, built with plain HTML, CSS, and JavaScript.
 
 ## Files
-- `index.html` — page content and sections
-- `styles.css` — layout, responsive styling, animations, and visual effects
-- `script.js` — mobile menu, animated counters, pointer glow, live year, and contact-form behavior
+- `index.html` — site content and structure
+- `styles.css` — full design system, layouts, and mobile responsiveness
+- `script.js` — mobile navigation and dynamic footer year
 
-## Run it
-1. Keep all three files in the same folder.
-2. Double-click `index.html` to open it in a browser.
-3. Internet is needed for Google Fonts and remote Unsplash photography.
+## Run locally
+Open `index.html` in a browser, or use VS Code Live Server.
 
-## Before publishing
-- Replace `hello@noirform.studio` in `index.html` and `script.js` with your real business email.
-- The contact form is a front-end demo: it validates fields and opens the visitor's email app with a prefilled message. It does not save or send form submissions by itself.
-- Project names and stats are illustrative concept content. Replace them with real work and verified numbers.
-- For a fully live contact form, connect a backend or form service.
+## Publish on GitHub Pages
+1. Create a public GitHub repository.
+2. Upload these files to the repository root.
+3. Open **Settings → Pages**.
+4. Select **Deploy from a branch**, branch `main`, folder `/(root)`, then Save.
+5. Wait for GitHub Pages to publish the live URL.
 
-No build tools or paid libraries required.
+## Before using for a real business
+- Replace every `hello@example.com` address with the real business email.
+- Replace concept project descriptions with accurate client/project details if presenting this as a real studio.
+- Images are loaded from Unsplash URLs and require an internet connection.
+- This is a front-end portfolio concept; the contact link opens an email draft and does not store form submissions.
